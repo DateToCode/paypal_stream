@@ -14,6 +14,11 @@ body {
   font-family: Helvetica;
 }
 
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
 .button {
   font-size: 0.9375rem;
   font-family: Helvetica;
@@ -74,6 +79,41 @@ body {
   color: #0d3685;
 }
 /* END MAIN SECTION */
+
+/* PAYPAL BUSINESS SECTION */
+#paypal-business {
+  border-bottom: 1px solid var(--dark-blue-color);
+  color: var(--dark-blue-color);
+  padding: 10px 0;
+}
+
+#paypal-business .container {
+  max-width: 1600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  min-height: 80px;
+  padding: 0 16px;
+}
+
+#paypal-business h2 {
+  font-weight: lighter;
+  font-size: 1.57rem;
+  text-align: center;
+  line-height: 1.875rem;
+}
+
+#paypal-business__button {
+  margin: 20px;
+  padding: 12px 18px;
+  border: 1px solid var(--main-bg-color);
+  background: var(--dark-blue-color);
+  color: var(--white-color);
+  font-size: 0.75rem;
+  line-height: 12px;
+}
+/* END PAYPAL BUSINESS SECTION */
 
 @media (min-width: 768px) {
   #main video {
