@@ -31,6 +31,90 @@ body {
   border: none;
 }
 
+.button__outlined {
+  border: 1px solid var(--white-color);
+  border-radius: 25px;
+  color: var(--white-color);
+  background: transparent;
+  outline: none;
+  padding: 12px 18px;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 1px #fff;
+  font-size: 0.75rem;
+}
+
+.button__contained {
+  border: 1px solid var(--white-color);
+  border-radius: 25px;
+  color: var(--dark-blue-color);
+  background: var(--white-color);
+  outline: none;
+  padding: 12px 18px;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 1px #fff;
+  font-size: 0.75rem;
+}
+
+/* HEADER SECTION */
+
+#header {
+  height: 80px;
+  padding: 12px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 100%);
+  background-color: var(--main-bg-color);
+}
+
+#header .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.6;
+  height: 40px;
+}
+
+.header__icon div {
+  background: url("./assets/logos/paypal.svg");
+  background-repeat: no-repeat;
+  background-size: auto 40px;
+  width: 40px;
+  min-height: 40px;
+}
+
+.navbar {
+  display: none;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar ul li {
+  text-transform: uppercase;
+  color: var(--white-color);
+  padding-left: 24px;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+#header__menu {
+  flex: 0.2;
+}
+
+#header__login {
+  flex: 0.2;
+}
+
+#header__signup {
+  display: none;
+}
+
 /* MAIN SECTION */
 
 #main {
@@ -115,9 +199,174 @@ body {
 }
 /* END PAYPAL BUSINESS SECTION */
 
+/* FEATURES SECTION */
+
+.feature .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 24px 16px;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+}
+
+.feature.feature--inverse .container {
+  flex-direction: row-reverse !important;
+}
+
+.feature .container > * {
+  max-width: 90%;
+}
+
+.feature__info {
+  padding: 10px 12px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.feature__info h2 {
+  font-size: 2.14rem;
+  font-weight: 400;
+  line-height: 3rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.feature__info p {
+  line-height: 30px;
+  flex: 1 0;
+}
+
+.feature__info a {
+  margin-top: 16px;
+  outline: 0;
+  text-decoration: none;
+  color: #00a8ea;
+  font-weight: 700;
+}
+.feature__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature__image img {
+  max-width: 300px;
+}
+
+#features__helpWorld,
+#features__notifications,
+#features__gifts {
+  background-color: #f5f7fa;
+}
+
+/* END FEATURES SECTION */
+
+/* CLIENTS SECTION */
+#clients {
+  padding: 48px 12px;
+}
+
+#clients h2 {
+  font-size: 2.14rem;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.clients__logo {
+  margin-top: 24px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+/* END CLIENTS SECTION */
+
+/* FOOTER SECTION */
+
+footer .container {
+  padding: 18px 12px;
+  font-size: 0.8rem;
+}
+
+footer ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  padding: 12px 0;
+}
+
+footer ul li {
+  margin: 2px 12px;
+}
+
+.footer__main {
+  font-weight: bold;
+}
+
+.footer__secondary {
+  color: #4a4a4a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__secondary > *:first-child {
+  width: 100%;
+  border-bottom: 1px solid #8b8b8b;
+}
+
 @media (min-width: 768px) {
   #main video {
     margin-top: -10vh;
     height: 600px;
+  }
+
+  .feature .container > * {
+    width: 50%;
+  }
+
+  .feature__info {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer__secondary > *:first-child {
+    width: 50%;
+    border: 0;
+  }
+}
+
+@media (min-width: 968px) {
+  #header__menu {
+    display: none;
+  }
+
+  .header__icon {
+    flex: 0.3;
+  }
+
+  .header__icon div {
+    width: 100%;
+  }
+
+  .navbar {
+    display: block;
+    flex: 1;
+  }
+
+  #header__login {
+    margin-left: 8px;
+    flex: 0.15;
+  }
+
+  #header__signup {
+    margin-left: 8px;
+    display: block;
+    flex: 0.15;
   }
 }
